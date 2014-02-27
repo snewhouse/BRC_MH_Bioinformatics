@@ -1,0 +1,43 @@
+Illumina Gene Expression Workflow: Pre Impute
+==============================================
+
+# Id bad chips
+
+```{r read_sample_data}
+
+raw_s <- read.table("SampleTableControl_raw.txt",head=T,sep="\t")
+head(raw_s)
+
+```
+
+```{r plot_Signal_Average}
+
+plot(raw_s$Signal.Average,ylab="Signal Average",type="b")
+plot(scale(raw_s$Signal.Average),ylab="Z Signal Average",type="b")
+abline(h=c(-2,0,2),col="grey")
+
+plot(scale(raw_s$Signal.P05),ylab="Z Signal.P05",type="b")
+abline(h=c(-2,0,2),col="grey")
+
+plot(scale(raw_s$Signal.P95),ylab="Z Signal.P95",type="b")
+abline(h=c(-2,0,2),col="grey")
+
+```
+
+```{r id_bad_chips, comment=NA}
+bad_chips <- raw_s$Sample.ID[scale(raw_s$Signal.Average) < -2 | scale(raw_s$Signal.Average) > 2]
+bad_chips <- as.data.frame(bad_chips); colnames(bad_chips) <- "Sample.ID"
+bad_chips
+write.table(bad_chips, file="bad_chips_pre_impute.txt",row.names=F, col.names=F,sep="\t",quote=F)
+
+bad_chips2 <- raw_s$Sample.ID[scale(raw_s$Signal.P05) < -2 ]
+bad_chips2 <- as.data.frame(bad_chips2); colnames(bad_chips2) <- "Sample.ID"
+bad_chips2
+
+
+
+#good_chips <- raw_s$Sample.ID[scale(raw_s$Signal.Average) > -2 & scale(raw_s$Signal.Average) < 2]
+#plot(scale(raw_s$Signal.Average[raw_s$Sample.ID %in% good_chips]),ylab="Z Signal Average",type="b")
+#abline(h=c(-2,0,2),col="grey")
+```
+
