@@ -21,6 +21,6 @@ Oldham MC1, Langfelder P, Horvath S. URL http://ccforum.com/1752-0509/6/63)
 More soon...
 
 ### Contact
-Dr Steve Newhouse
-stephen.newhouse@kcl.ac.uk
-stephen.j.newhouse@gmail.com
+- Dr Steve Newhouse
+- stephen.newhouse@kcl.ac.uk
+- stephen.j.newhouse@gmail.com
