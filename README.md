@@ -1,14 +1,15 @@
 Illumina Gene Expression Analysis Workflow
 ===========================================
+
 Illumina Chip based Gene Expression Pipeline (QC, Normalization, Differential Expression)  
 
 This is an example of a typical workflow we apply at the NIHR BRC-MH Bioinformatics unit.  
 
 ***Please note that this is under constant development and may need tweaking for your needs***
 
-### Basic routines included in workflow 
+## Basic routines included in workflow 
 
-- Genomestudio Final Reports read into ***LumiBatch***  using `lumi`
+- ***Genomestudio Final Reports*** read into `R` as a ***LumiBatch*** object  using `lumi`
 - ***QC Plots***: Boxplots, PCA Plots, hierarchical clustering, Coloured Dendograms...
 - ***Probe Detection*** : based on expression level greater than the mean on the NEGATIVE beads
 - ***Gender Checks*** : XIST Probe expression
@@ -20,7 +21,7 @@ Oldham MC1, Langfelder P, Horvath S. URL http://ccforum.com/1752-0509/6/63)
 
 More soon...
 
-### Contact
+#### Contact
 - Dr Steve Newhouse
 - stephen.newhouse@kcl.ac.uk
 - stephen.j.newhouse@gmail.com
