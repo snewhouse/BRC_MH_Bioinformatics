@@ -7,6 +7,8 @@ This is an example of a typical workflow we apply at the NIHR BRC-MH Bioinformat
 
 ***Please note that this is under constant development and may need tweaking for your needs***
 
+****************************************************************************************************
+
 ## Basic routines included in workflow 
 
 - ***Genomestudio Final Reports*** read into `R` as a ***LumiBatch*** object  using `lumi`
