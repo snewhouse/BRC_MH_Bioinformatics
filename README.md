@@ -19,3 +19,8 @@ Oldham MC1, Langfelder P, Horvath S. URL http://ccforum.com/1752-0509/6/63)
 - Removal of ***Batch Effects*** using `sva`, `ComBat` or `rlm` PCA Batch regressions
 
 More soon...
+
+### Contact
+Dr Steve Newhouse
+stephen.newhouse@kcl.ac.uk
+stephen.j.newhouse@gmail.com
