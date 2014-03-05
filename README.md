@@ -102,7 +102,7 @@ To make the input file for `lumiR()` the three final report file generated in st
 
 1 Group_Probe_Profile_FinalReport.txt  
 2 Control_Probe_Profile_FinalReport.txt  
-3 Probe_Annotation_FinalReport.txt  
+3 Sample_Table_FinalReport.txt  
 
 ***example script for generating lumiR input***
 
