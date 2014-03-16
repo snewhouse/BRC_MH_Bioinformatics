@@ -962,7 +962,7 @@ neg_2sd <- neg_mean + 2*neg_sd
 ## rows are probes, cols are samples 
 
 ## THIS IS THE MAIN PROBE DETECTION CALCULATION
-det <- sweep(gx, 1, round(neg_mean,2),">")
+det <- sweep(gx, 2, round(neg_mean,2),">")
 
 ## Writing Probe Detection Calls to file #
 det_tmp  <- as.data.frame(det)
@@ -1043,7 +1043,7 @@ n_samples_in_group <- dim(gx[,sel_samples])[2];
 
 cat(" Number of samples in group [",n,"] = ",n_samples_in_group,"\r","\n")
 
-detection_matrix <- sweep(gx[,sel_samples],1,round(neg_mean,2)[sel_samples],">")
+detection_matrix <- sweep(gx[,sel_samples],2,round(neg_mean,2)[sel_samples],">")
 
 group_probe_detection <- rowSums(detection_matrix) >= (probe_det/100)*n_samples_in_group
 
@@ -1067,7 +1067,7 @@ write.table( det_probes ,file=paste(out_dir,"/",project_name,".GROUP.",group_lab
 cat(" Y Chromosome probe detection based on XIST MALEs","\r","\n")
 xist_MALES <- pData(eset_bg)$xist_gender=="MALE"
 gx_y <- exprs(eset_bg[fData(eset_bg)$CHR=="Y",])
-detection_matrix_y <- sweep( gx_y[,xist_MALES],1, neg_mean[xist_MALES ],">")
+detection_matrix_y <- sweep( gx_y[,xist_MALES],2, neg_mean[xist_MALES ],">")
 y_probe_detection <- rowSums(detection_matrix_y) >= (probe_det/100) * sum(xist_MALES==TRUE)
 y_probe_detection_nuID <- rownames( gx_y[y_probe_detection, ])
 y_det_probes <- as.data.frame(y_probe_detection_nuID)
