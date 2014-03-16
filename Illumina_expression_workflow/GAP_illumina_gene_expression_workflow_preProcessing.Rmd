@@ -52,15 +52,6 @@ For those interested in how the raw data files were produced, and the standard w
 ## How to get the worflow and scripts
 This works...if it doesnt, then email me.
 
-```{r wget_scripts, eval=FALSE}
-
-# The Microarry pre-processing workflow for Illumina BeadArray data
-wget http://git.brc.iop.kcl.ac.uk/snewhousebrc/sjnewhouse/blob/dev/GENE_EXPRESSION/Illumina_expression_workflow/illumina_gene_expression_workflow_preProcessing.Rmd  
-
-# Associated functions and extra stuff
-wget http://git.brc.iop.kcl.ac.uk/snewhousebrc/sjnewhouse/blob/dev/GENE_EXPRESSION/Illumina_expression_workflow/sjnewhouse_misc_R.R  
-
-```
 *****
 
 Example workflow based on real data (GAP). 
