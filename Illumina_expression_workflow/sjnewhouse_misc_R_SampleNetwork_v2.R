@@ -1,12 +1,32 @@
+library(lumi)
+library(annotate)
+library(lumiHumanAll.db)
+library(affy)
+library(cluster)
+library(impute)
+library(WGCNA)
+allowWGCNAThreads(nThreads=6)
+library(gplots)
+library(limma)
+library(vsn)
+library(MBCB)
+library(lumiHumanIDMapping)
+library(scatterplot3d)
+library(relaimpo)
+library(plyr)
+library(ggplot2)
+library(gdata)
+library(sva)
+library(pamr)
+library(glmnet)
+library(snow)
+library(parallel)
+library(foreach)
+library(doParallel)
+library(caret)
 ###################
 ## sampleNetwork ##
 ###################
-
-
-phenotype_data <- pData(eset) 
-gene_expression_matrix <- exprs(eset)
-outfile <- "test"
-groupsLabel="GROUPS"
 
 basic_sampleNetwork <- function(gene_expression_matrix , phenotype_data, groupsLabel="GROUPS", outfile, sd_thrs=2 ) {
     

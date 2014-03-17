@@ -1,3 +1,36 @@
+library(lumi)
+library(annotate)
+library(lumiHumanAll.db)
+library(affy)
+library(cluster)
+library(impute)
+library(WGCNA)
+allowWGCNAThreads(nThreads=6)
+library(gplots)
+library(limma)
+library(vsn)
+library(MBCB)
+library(lumiHumanIDMapping)
+library(scatterplot3d)
+library(relaimpo)
+library(plyr)
+library(ggplot2)
+library(gdata)
+library(sva)
+library(pamr)
+library(glmnet)
+library(snow)
+library(parallel)
+library(foreach)
+library(doParallel)
+library(caret)
+
+####
+def.par <- par(no.readonly = TRUE)
+
+dev.off()
+par(def.par)
+
 
 ############################
 ## subset eset
@@ -537,23 +570,34 @@ basic_qc_plot_lumi <- function(eset) {
   ## Standard plots
   cat(" beging plotting boxplot","\r","\n")
   plot(eset, what='boxplot', col=chip_col )
+  dev.off()
+  par(def.par)
   cat(" beging plotting outlier","\r","\n")
   plot(eset, what='outlier'  )
+  dev.off()
+  par(def.par)
   cat(" beging plotting sampleTree <- flashClust( dist_exprs, method = \"average\")","\r","\n")
   plot(sampleTree)
+  dev.off()
+  par(def.par)
   cat(" beging plotting density","\r","\n")
   plot(eset, what='density' )
+  dev.off()
+  par(def.par)
   cat(" beging plotting cv","\r","\n")
   plot(eset, what='cv'  )
-  
+  dev.off()
+  par(def.par)
+    
 }
 
 ## pca_plot_lumi
-pca_plot_lumi <- function(eset) {
+pca_plot_lumi <- function(eset, probe_list) {
   
   cat(" setting up data for qc plots","\r","\n")
   ## get pheno data
   cat(" get pheno data","\r","\n")
+  sel_probes <- probe_list
   pheno <- pData(eset)
   ## basic colours
   cat(" basic colours","\r","\n")
@@ -584,7 +628,7 @@ pca_plot_lumi <- function(eset) {
   cat(" begin PCA plots","\r","\n")
   cat(" calculating PCs using prcomp()","\r","\n")
   def.par <- par(no.readonly = TRUE)
-  gx <- t(exprs(eset));
+  gx <- t(exprs(eset[sel_probes,]));
   pca_gx <- prcomp(gx);
   pca_summary <- summary(pca_gx)
   pca_importance_var_exp <- summary(pca_gx)$importance[2,]
@@ -599,10 +643,10 @@ pca_plot_lumi <- function(eset) {
   pca_raw <- pca_gx$x;
   ## PCA plots
   plot(pca_raw[,"PC1"],pca_raw[,"PC2"], main=" PCA plot coloured by chip ",col="black", pch=21,bg=chip_col)
-  plot(pca_raw[,"PC1"],pca_raw[,"PC2"], main=" PCA plot  coloured by Group ",col="black", pch=21,bg=group_col)
-  plot(pca_raw[,"PC1"],pca_raw[,"PC2"], main=" PCA plot  coloured by Phenotype ",col="black", pch=21,bg=pheno_col)
-  plot(pca_raw[,"PC1"],pca_raw[,"PC2"], main=" PCA plot  coloured by Gender ",col="black", pch=21,bg=gender_col)
-  plot(pca_raw[,"PC1"],pca_raw[,"PC2"], main=" PCA plot  coloured by Tissue ",col="black", pch=21,bg=tissue_col)
+  plot(pca_raw[,"PC1"],pca_raw[,"PC2"], main=" PCA plot coloured by Group ",col="black", pch=21,bg=group_col)
+  plot(pca_raw[,"PC1"],pca_raw[,"PC2"], main=" PCA plot coloured by Phenotype ",col="black", pch=21,bg=pheno_col)
+  plot(pca_raw[,"PC1"],pca_raw[,"PC2"], main=" PCA plot coloured by Gender ",col="black", pch=21,bg=gender_col)
+  plot(pca_raw[,"PC1"],pca_raw[,"PC2"], main=" PCA plot coloured by Tissue ",col="black", pch=21,bg=tissue_col)
   ## loop PCA and plot by tech var
   for(tech_var in batch_var_names) {
     cat(" begin looping through batch variable PCA plots ",tech_var,"\r","\n")
@@ -751,6 +795,9 @@ sampleNetwork_plot_all_lumi <- function(eset, colBy=c("chip","group") ) {
   Z.C=(FNC$ClusterCoef-mean(FNC$ClusterCoef))/sd(FNC$ClusterCoef)
   rho <- signif(cor.test(Z.K,Z.C,method="s")$estimate,2)
   rho_pvalue <- signif(cor.test(Z.K,Z.C,method="s")$p.value,2)
+  Z.K_outliers <- Z.K < -3
+  Z.K_score <- Z.K[Z.K_outliers==TRUE]
+  Z.K_outliers <- colnames(datExprs)[Z.K_outliers==TRUE]
 # set colours
   cat(" colorvec [",paste(gp_col),"]","\r","\n")
 if(gp_col=="chip") { colorvec <- labels2colors(as.character(pData(eset)$Sentrix.Barcode)) }
@@ -801,6 +848,9 @@ if(gp_col=="group") { colorvec <- labels2colors(as.character(pData(eset)$GROUPS)
   mtext(paste("rho = ",signif(cor.test(Z.K,Z.C,method="s")$estimate,2)," p = ",signif(cor.test(Z.K,Z.C,method="s")$p.value,2),sep=""),cex=0.8,line=0.2)
   abline(v=-2,lty=2,col="grey")
   abline(h=-2,lty=2,col="grey")
+res <- list(Z.K_outliers=Z.K_outliers, Z.K_score=Z.K_score)
+# return(Z.K_outliers, return(Z.K_score)
+return(res)
 }
 
 # gx_qc_plots_lumi_2
