@@ -75,10 +75,10 @@ This is a file with any and all known *batch* or *technical* data related to sam
 
 
 ### Do's and Dont's
-***Stick to these formats or the workflow will break!***
-***USE UPPER CASE FOR GROUPS, SEX, PHENOTYPE****
-***DONT MIX NUMBERS WITH TEXT IN THE SAME FIELD***
-***USE "NA" OR "" IE LEAVE BLANK FOR MISSING DATA***
+***Stick to these formats or the workflow will break!***  
+***USE UPPER CASE FOR GROUPS, SEX, PHENOTYPE****  
+***DONT MIX NUMBERS WITH TEXT IN THE SAME FIELD***  
+***USE "NA" OR "" IE LEAVE BLANK FOR MISSING DATA***  
 
 
 ******
