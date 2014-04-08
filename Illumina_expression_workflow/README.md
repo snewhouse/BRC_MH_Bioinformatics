@@ -52,12 +52,12 @@ Along with the output from Genomestudio (see below: Making Lumi input files from
 See [pheno_info.txt] as an example.
 
 - Required fields   
--- Sample.ID Must match the chip id from the illumina array eg 	9020374058_A  
--- GROUPS  Biological groups of interest. May be identical to phenotype codes. Examples below.  
--- SEX  Gender (MALE or FEMALE)
--- TISSUE  	Tissue type (BLOOD, BRAIN etc)
--- PHENOTYPE  	Primary Phenotype of interest. CASE, CONTROL etc
--- Study_ID  Study ID 
+-- Sample.ID : Must match the chip id from the illumina array eg 	9020374058_A  
+-- GROUPS  : Biological groups of interest. May be identical to phenotype codes. Examples below.  
+-- SEX  : Gender (MALE or FEMALE)  
+-- TISSUE : Tissue type (BLOOD, BRAIN etc)  
+-- PHENOTYPE : Primary Phenotype of interest. CASE, CONTROL etc  
+-- Study_ID : Study ID  
 
 ***GROUPS***
 How you set up the ***GROUPS*** field is very important.
