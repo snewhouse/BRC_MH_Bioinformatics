@@ -50,7 +50,7 @@ Along with the output from Genomestudio (see below: Making Lumi input files from
 #### Phenotype File Format
 
 - See [pheno_info.txt] as an example
-- Required fields : 
+- Required fields   
 -- Sample.ID	
 -- GROUPS 
 -- SEX 
