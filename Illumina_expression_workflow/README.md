@@ -49,17 +49,36 @@ Along with the output from Genomestudio (see below: Making Lumi input files from
 
 #### Phenotype File Format
 
-- See [pheno_info.txt] as an example
-- Required fields   
--- Sample.ID	
--- GROUPS 
--- SEX 
--- TISSUE	
--- PHENOTYPE	
--- Study_ID
+See [pheno_info.txt] as an example.
 
+- Required fields   
+-- Sample.ID Must match the chip id from the illumina array eg 	9020374058_A  
+-- GROUPS  Biological groups of interest. May be identical to phenotype codes. Examples below.  
+-- SEX  Gender (MALE or FEMALE)
+-- TISSUE  	Tissue type (BLOOD, BRAIN etc)
+-- PHENOTYPE  	Primary Phenotype of interest. CASE, CONTROL etc
+-- Study_ID  Study ID 
+
+***GROUPS***
+How you set up the ***GROUPS*** field is very important.
 
 #### Batch File Format
+
+See [batch_info.txt] as an example.  
+This is a file with any and all known *batch* or *technical* data related to sample processing eg  
+- RIN
+- Date of RNA extraction
+- Date Chip Run
+- Processing Batch
+- RNA concentrations
+- .......
+
+
+### Do's and Dont's
+***Stick to these formats or the workflow will break!***
+***USE UPPER CASE FOR GROUPS, SEX, PHENOTYPE****
+***DONT MIX NUMBERS WITH TEXT IN THE SAME FIELD***
+***USE "NA" OR "" IE LEAVE BLANK FOR MISSING DATA***
 
 
 ******
