@@ -13,15 +13,57 @@ This is an example of a typical workflow we apply at the NIHR BRC-MH Bioinformat
 
 - Genomestudio Final Reports read into ***LumiBatch***  using `lumi`
 - ***QC Plots***: Boxplots, PCA Plots, hierarchical clustering, Coloured Dendograms...
+- ***Background Correction***: [MBCB (Model-based Background Correction for Beadarray)](http://www.bioconductor.org/packages/release/bioc/html/MBCB.html)
 - ***Probe Detection*** : based on expression level greater than the mean on the NEGATIVE beads
-- ***Gender Checks*** : XIST Probe expression
+- ***Gender Checks*** : based on XIST Probe expression
 - ***SampleNetwork Outliers*** : (based on : BMC Syst Biol. 2012 Jun 12;6:63. doi: 10.1186/1752-0509-6-63.
 Network methods for describing sample relationships in genomic datasets: application to Huntington's disease.
 Oldham MC1, Langfelder P, Horvath S. URL http://ccforum.com/1752-0509/6/63)
-- Analysis of ***Batch Effects***
-- Removal of ***Batch Effects*** using `sva`, `ComBat` or `lm` PCA Batch regressions
+- Analysis of ***Batch Effects***: PCA `prcomp` using non-detected probes (optional:plus Housekeeping probes)
+- Removal of ***Batch Effects*** using `sva`, `ComBat` or `lm` PCA Batch regressions or a combination of all
+
+**NB:*** This is one way of doing it - that works well in our hands, and ensures you arent testing for association and building classification models with noise and unreliably detected probes!
 
 ******
+
+### Summary of basic worklfow
+
+1. raw data
+2. background correct
+3. probe detection rates 
+4. gender checks
+5. transformation and normalisation
+6. sample group outliers
+7. Identify bacth effects
+8. Remove batch effects
+9. final clean data
+
+******
+
+### Additional Files
+
+Along with the output from Genomestudio (see below: Making Lumi input files from Genomestudio), the worklfow requires the user to provide two additional files.  
+
+1) Phenotype file
+2) Batch information file
+
+#### Phenotype File Format
+
+- See [pheno_info.txt] as an example
+- Required fields : 
+-- Sample.ID	
+-- GROUPS 
+-- SEX 
+-- TISSUE	
+-- PHENOTYPE	
+-- Study_ID
+
+
+#### Batch File Format
+
+
+******
+
 
 Making Lumi input files from Genomestudio
 ==============================================
