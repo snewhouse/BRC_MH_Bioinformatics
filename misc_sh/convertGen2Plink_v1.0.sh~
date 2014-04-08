@@ -63,7 +63,7 @@ echo "Converting to PLINK Binary"
 echo "calling:- plink2 --gen ${1} --sample ${2} --make-bed --out ${3} --hard-call-threshold 0.0"
 echo ""
 
-${PLINK_EXE} --gen ${1} --sample ${2} --make-bed --out ${3} --hard-call-threshold 0.0;
+${PLINK_EXE} --gen ${1} --sample ${2} --make-bed --out ${3};
 
 
 
