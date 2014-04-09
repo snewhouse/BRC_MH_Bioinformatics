@@ -9,6 +9,22 @@ This is an example of a typical workflow we apply at the NIHR BRC-MH Bioinformat
 
 ***Please note that this is under constant development and may need tweaking for your needs***
 
+******
+
+Required Input Files
+----------------------
+
+1 Group_Probe_Profile_FinalReport.txt  
+2 Control_Probe_Profile_FinalReport.txt  
+3 Sample_Table_FinalReport.txt  
+4 Phenotype file  
+5 Batch information file  
+
+Files 1-3 are generated in [Genometudio](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#making-lumi-input-files-from-genomestudio).  
+Files 4-5 are provided by the user. 
+
+******
+
 ### Basic routines included in workflow 
 
 - Genomestudio Final Reports read into ***LumiBatch***  using `lumi`
