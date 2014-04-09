@@ -9,7 +9,7 @@ This is an example of a typical workflow we apply at the NIHR BRC-MH Bioinformat
 
 ***Please note that this is under constant development and may need tweaking for your needs***
 
-******
+*********
 
 Required Input Files
 ----------------------
@@ -31,7 +31,7 @@ Files [4-5](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illum
 - Genomestudio Final Reports read into ***LumiBatch***  using `lumi`
 - ***QC Plots***: Boxplots, PCA Plots, hierarchical clustering, Coloured Dendograms...
 - ***Background Correction***: [MBCB (Model-based Background Correction for Beadarray)](http://www.bioconductor.org/packages/release/bioc/html/MBCB.html)
-- ***Probe Detection*** : based on expression level greater than the mean on the NEGATIVE beads
+- ***Probe Detection*** : based on expression level greater than the mean on the [NEGATIVE beads](https://github.com/snewhouse/Misc/blob/master/Dont_Trust_Illumina_Detection_P_Values.md#expression-arrays--dont-trust-illumina-detection-p-values-at-th001)
 - ***Gender Checks*** : based on XIST Probe expression
 - ***SampleNetwork Outliers*** : (based on : BMC Syst Biol. 2012 Jun 12;6:63. doi: 10.1186/1752-0509-6-63.
 Network methods for describing sample relationships in genomic datasets: application to Huntington's disease.
