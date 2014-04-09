@@ -20,8 +20,8 @@ Required Input Files
 4 Phenotype file  
 5 Batch information file  
 
-Files 1-3 are generated in [Genometudio](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#making-lumi-input-files-from-genomestudio).  
-Files [4-5](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#additional-files)are provided by the user
+Files [1-3](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#making-lumi-input-files-from-genomestudio) are generated in Genometudio.   
+Files [4-5](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#additional-files) are provided by the user
 
 
 ******
