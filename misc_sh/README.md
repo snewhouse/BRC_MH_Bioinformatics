@@ -4,8 +4,10 @@
 - converts OXFORD format *.gen Files to PLINK Binary files
 - Uses Plink2: https://www.cog-genomics.org/plink2/
 
-###
-
+### convertGen2RDose_v1.0.sh
+- converts OXFORD format *.gen Files to dosage file. 
+- Genotypes are coded as the expected dose of minor allele
+- Uses fcgene: http://sourceforge.net/projects/fcgene/files/
 
 
 -------------------------------------------------------------------------------------------------
