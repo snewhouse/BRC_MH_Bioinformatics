@@ -60,7 +60,16 @@ See [pheno_info.txt] as an example.
 -- Study_ID : Study ID  
 
 ***GROUPS***
-How you set up the ***GROUPS*** field is very important.
+- How you set up the ***GROUPS*** field is very important.
+- Make sure you hav at least 5 samples per group or the stats is a bit weird and may break
+- GROUPS should represent some sensible biology or natural groupings of data
+- GROUPS is used in the sampleNetwork outliers detection - this is used to qc your sample data/phenotype and tissue groups, with the aim of making a set of *homogenous* samples per GROUP/PENOTYPE
+- This helps prevent problems that sample heterogenity can cause
+- The end result is that for e.g. your CASES are more like each other and *funny* outlier samples are removed
+- Some examples :-  
+-- 1) 4 tissues, 2 disease groups: 
+
+
 
 #### Batch File Format
 
@@ -75,10 +84,10 @@ This is a file with any and all known *batch* or *technical* data related to sam
 
 
 ### Do's and Dont's
-***Stick to these formats or the workflow will break!***  
-***USE UPPER CASE FOR GROUPS, SEX, PHENOTYPE****  
-***DONT MIX NUMBERS WITH TEXT IN THE SAME FIELD***  
-***USE "NA" OR "" IE LEAVE BLANK FOR MISSING DATA***  
+- ***Stick to these formats or the workflow will break!***  
+- ***USE UPPER CASE FOR GROUPS, SEX, PHENOTYPE****  
+- ***DONT MIX NUMBERS WITH TEXT IN THE SAME FIELD EG 1 and 1 year***  
+- ***MISSING DATA : USE "NA" OR "" IE LEAVE BLANK FOR MISSING DATA***  
 
 
 ******
