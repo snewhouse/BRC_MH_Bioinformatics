@@ -59,6 +59,8 @@ See [pheno_info.txt] as an example.
 -- PHENOTYPE : Primary Phenotype of interest. CASE, CONTROL etc  
 -- Study_ID : Study ID  
 
+******
+
 ##### GROUPS
 
 - How you set up the ***GROUPS*** field is very important.
@@ -79,6 +81,7 @@ See [pheno_info.txt] as an example.
 *Multiple Phenotypes*
 - GROUPS:- phenotype_1, phenotype_2, phenotype_3
 
+******
 
 #### Batch File Format
 
