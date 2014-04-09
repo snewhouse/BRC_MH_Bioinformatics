@@ -42,7 +42,7 @@ Oldham MC1, Langfelder P, Horvath S. URL http://ccforum.com/1752-0509/6/63)
 
 ### Additional Files
 
-Along with the output from Genomestudio (see below: Making Lumi input files from Genomestudio), the worklfow requires the user to provide two additional files.  
+Along with the output from Genomestudio (see below: [Making Lumi input files from Genomestudio](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#making-lumi-input-files-from-genomestudio)), the worklfow requires the user to provide two additional files.  
 
 1) Phenotype file
 2) Batch information file
