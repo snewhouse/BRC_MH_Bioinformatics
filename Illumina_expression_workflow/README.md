@@ -94,8 +94,9 @@ This is a file with any and all known *batch* or *technical* data related to sam
 - RNA concentrations
 - .......
 
+******
 
-### Do's and Dont's
+### Do's and Dont's for data
 - ***Stick to these formats or the workflow will break!***  
 - ***USE UPPER CASE FOR GROUPS, SEX, PHENOTYPE****  
 - ***DONT MIX NUMBERS WITH TEXT IN THE SAME FIELD EG 1 and 1 year***  
