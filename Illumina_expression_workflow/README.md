@@ -176,12 +176,13 @@ Under the “Name” tab select “Default”. Click “Finish”.
 - From the “Tables” sub-window check the “Group Probe Profile” box
 - From the “Columns” sub window check all boxes. Use the shift key to check multiple boxes.
 - From the “Subcolumns” sub window check all boxes. Click “OK”.
+- You could use "Sample Probe Profile" depending on how your data us set up
 
-***Sample_Probe_Profile_Final_Report.txt***
+***Control_Probe_Profile_Final_Report.txt***
 
 - Select “Analysis” > “Reports” > “Final Report”
-- Browse” and locate the “GenomeStudio_Final_Report” folder created in step 1 and name the file to be created as: “Sample_Probe_Profile_Final_Report.txt”. Click “OK”
-- From the “Tables” sub-window check the “Sample Probe Profile” box
+- Browse” and locate the “GenomeStudio_Final_Report” folder created in step 1 and name the file to be created as: “Control_Probe_Profile_Final_Report.txt”. Click “OK”
+- From the “Tables” sub-window check the “Control Probe Profile” box
 - From the “Columns” sub window check all boxes. Use the shift key to check multiple boxes.
 - From the “Subcolumns” sub window check all boxes. Click “OK”.
 
