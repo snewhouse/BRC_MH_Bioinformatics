@@ -11,7 +11,7 @@ This is an example of a typical workflow we apply at the NIHR BRC-MH Bioinformat
 
 *********
 
-Workflow:- illumina_gene_expression_workflow_preProcessing.Rmd
+illumina_gene_expression_workflow_preProcessing.Rmd
 -----------------------------------------------------
 
 - Use this [illumina_gene_expression_workflow_preProcessing.Rmd](https://github.com/snewhouse/BRC_MH_Bioinformatics/tree/master/Illumina_expression_workflow/illumina_gene_expression_workflow_preProcessing.Rmd)
