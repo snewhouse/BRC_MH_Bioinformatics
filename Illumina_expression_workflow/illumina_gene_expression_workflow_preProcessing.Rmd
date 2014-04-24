@@ -1044,13 +1044,16 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3441531/?tool=pmcentrez&report=abstr
 # http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3441531/?tool=pmcentrez&report=abstract
 # Oginal Code : 
 
+
+source("https://github.com/snewhouse/BRC_MH_Bioinformatics/sjnewhouse_misc_R_SampleNetwork_v2.R")
+
 # basic_sampleNetworkIterate
-ISAoutliers <- basic_sampleNetworkIterate(eset=eset_bg_log2_rsn_0,
-                                          col_by_chip=0, 
-                                          groups="byGroup" ,
+
+ISAoutliers <- basic_sampleNetworkIterate(gene_expression_matrix=exprs(eset_bg_log2_rsn_0),
+                                          phenotype_data=pData(eset_bg_log2_rsn_0),
+                                          groupsLabel="GROUPS", 
                                           outfile=paste(out_dir,"/",project_name,".eset_bg_log2_rsn_0",sep=""), 
-                                          IACthresh=0.95, 
-                                          sd_thrs=iac_sd_thrs );
+                                          sd_thrs=2);
 
 # Outliers
 outlier_samples <- ISAoutliers$iac_outlier_samples
@@ -1404,7 +1407,8 @@ After ComBat use linear regression to adjust for any numerical variables from `s
 
 ComBat
 ==============================
-Example below is for 3 sig batch variables 
+Example below is for 3 sig batch variables.
+This is a quick example, I recommend running PCA batch regressions after each round of ComBat
 
 ```{r Combat_all_probes}
 library(sva)
@@ -1445,6 +1449,12 @@ save(eset_bg_log2_rsn_combat, file=paste(out_dir,"/",project_name,".eset_bg_log2
 
 Batch Correction using linear models
 =====================================
+ComBat does not remove effects of linear/qunatitative variables. Do this with linear regresssion.
+The other option is to use `sva` or `prcomp` and use the SVs or PCs in analyses and/or regress them out at this stage
+Again, run PCA regressions from a bove and check you have actually removed that varitation and lool at qc plots - coloured dendograms!
+
+Uses `RcppArmadillo` for ***FAST REGRESSSION****
+
 ```{r linear_model_batch_correction_prep, eval=TRUE}
 
 if(pheno!="PC1") stop(" WARNING!: model terms are not from the PC1 ~ batch regressions" )
