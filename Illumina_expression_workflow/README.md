@@ -11,6 +11,14 @@ This is an example of a typical workflow we apply at the NIHR BRC-MH Bioinformat
 
 *********
 
+illumina_gene_expression_workflow_preProcessing.Rmd
+-----------------------------------------------------
+
+- Use this [illumina_gene_expression_workflow_preProcessing.Rmd]
+- check for updates/changes on a regular basis
+- Do not blinding apply this workflow.
+- Step through it manually and edit to your needs
+
 Required Input Files
 ----------------------
 
