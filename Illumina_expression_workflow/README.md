@@ -19,8 +19,14 @@ illumina_gene_expression_workflow_preProcessing.Rmd
 - Do not blindly apply this workflow. 
 - Step through it manually and edit to your needs  
 - This is set up for best use through [RStudio](http://www.rstudio.com/)  
-- The script file is format is [R Markdown (*.Rmd)](https://www.rstudio.com/ide/docs/r_markdown)  
-- Be smart with the input [data](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#dos-and-donts-for-data)
+- The script file format is written in [R Markdown (*.Rmd)](https://www.rstudio.com/ide/docs/r_markdown)  
+- Be smart with the input [data](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#dos-and-donts-for-data)  
+- This works best for studies with at least 10 samples per group/phenotype
+- For small sample sizes ie < 10, then manually step through this script using [RStudio](http://www.rstudio.com/), and edit where needed  
+
+Required R Pacakges
+-----------------------
+
 
 
 Required Input Files
