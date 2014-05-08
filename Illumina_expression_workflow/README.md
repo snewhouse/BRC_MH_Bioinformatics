@@ -26,8 +26,33 @@ illumina_gene_expression_workflow_preProcessing.Rmd
 
 Required R Pacakges
 -----------------------
-
-
+```
+library(lumi)
+library(annotate)
+library(lumiHumanAll.db)
+library(affy)
+library(cluster)
+library(impute)
+library(WGCNA)
+library(gplots)
+library(limma)
+library(vsn)
+library(MBCB)
+library(lumiHumanIDMapping)
+library(scatterplot3d)
+library(relaimpo)
+library(plyr)
+library(ggplot2)
+library(gdata)
+library(sva)
+library(pamr)
+library(glmnet)
+library(snow)
+library(parallel)
+library(foreach)
+library(doParallel)
+library(caret)
+```
 
 Required Input Files
 ----------------------
