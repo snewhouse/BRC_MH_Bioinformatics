@@ -109,7 +109,7 @@ Along with the output from Genomestudio (see below: [Making Lumi input files fro
 
 #### Phenotype File Format
 
-See [pheno_info.txt] as an example.
+See [pheno_info.txt](https://raw.githubusercontent.com/snewhouse/BRC_MH_Bioinformatics/master/Illumina_expression_workflow/pheno_info.txt) as an example.
 
 - Required fields   
 -- Sample.ID : Must match the chip id from the illumina array eg 	9020374058_A  
