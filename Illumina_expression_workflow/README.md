@@ -145,7 +145,7 @@ See [pheno_info.txt](https://raw.githubusercontent.com/snewhouse/BRC_MH_Bioinfor
 
 #### Batch File Format
 
-See [batch_info.txt] as an example.  
+See [batch_info.txt](https://raw.githubusercontent.com/snewhouse/BRC_MH_Bioinformatics/master/Illumina_expression_workflow/batch_info.txt) as an example.  
 This is a file with any and all known *batch* or *technical* data related to sample processing eg  
 - RIN
 - Date of RNA extraction
