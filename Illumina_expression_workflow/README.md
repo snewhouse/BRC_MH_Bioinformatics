@@ -17,7 +17,9 @@ illumina_gene_expression_workflow_preProcessing.Rmd
 - Use this [illumina_gene_expression_workflow_preProcessing.Rmd](https://github.com/snewhouse/BRC_MH_Bioinformatics/tree/master/Illumina_expression_workflow/illumina_gene_expression_workflow_preProcessing.Rmd)
 - check for updates/changes on a regular basis
 - Do not blindly apply this workflow. 
-- Step through it manually and edit to your needs
+- Step through it manually and edit to your needs  
+- This is set up for best use through [RStudio](http://www.rstudio.com/)  
+- The script file is format is [R Markdown (*.Rmd)](https://www.rstudio.com/ide/docs/r_markdown)  
 - Be smart with the input [data](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#dos-and-donts-for-data)
 
 
