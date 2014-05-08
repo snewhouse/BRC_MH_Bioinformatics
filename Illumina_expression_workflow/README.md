@@ -60,8 +60,8 @@ Required Input Files
 1. Group_Probe_Profile_FinalReport.txt  
 2. Control_Probe_Profile_FinalReport.txt  
 3. Sample_Table_FinalReport.txt  
-4. Phenotype file  
-5. Batch information file  
+4. [Phenotype file](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#phenotype-file-format  )  
+5. [Batch information file]()    
 
 Files [1-3](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#making-lumi-input-files-from-genomestudio) are generated in Genometudio.   
 Files [4-5](https://github.com/snewhouse/BRC_MH_Bioinformatics/blob/master/Illumina_expression_workflow/README.md#additional-files) are provided by the user
