@@ -9,7 +9,7 @@ This is an example of a typical workflow we apply at the NIHR BRC-MH Bioinformat
 
 ***Please note that this is under constant development and may need tweaking for your needs***  
 
-NB:* This is one way of doing it - that works well in our hands, and ensures you arent testing for association and building classification models with noise and unreliably detected probes!
+***NB:*** This is one way of doing it - that works well in our hands, and ensures you arent testing for association and building classification models with noise and unreliably detected probes!
 
 *********
 
