@@ -294,7 +294,8 @@ negBeadOutlierRepMean <- function(x) {
 ##############
 ## quantfun ##
 ##############
-quantfun <- function(x,probs=c(seq(0,1,0.20))) {
+quantfun <- function(x,probs=c(seq(0,1,0.25))) {
+# changed from function(x,probs=c(seq(0,1,0.20))) to function(x,probs=c(seq(0,1,0.25)))
 as.integer(cut(x, quantile(x, probs ), include.lowest=TRUE))
 }
 ##############
