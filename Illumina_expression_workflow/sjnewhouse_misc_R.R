@@ -664,6 +664,7 @@ pca_plot_lumi <- function(eset, probe_list) {
 }
 
 # coloured_dendrogram_lumi
+
 coloured_dendrogram_lumi <- function(eset){
   ## get pheno data
   cat(" get pheno data","\r","\n")
@@ -701,16 +702,17 @@ coloured_dendrogram_lumi <- function(eset){
   sampleTree <- flashClust( dist_exprs, method = "average");
   # plotDendroAndColors
   cat(" plotDendroAndColors","\r","\n")
-  def.par <- par(no.readonly = TRUE)
+  #def.par <- par(no.readonly = TRUE)
   par(mar=c(5.1, 20, 4, 2.1)) #bottom, left, top and right margins
   plotDendroAndColors(sampleTree,
                       groupLabels=names(datColors),
                       colors=datColors,
                       dendroLabels = pData(eset)$Sample.ID,marAll = c(1, 10, 3, 1), 
                       main="Sample dendrogram and trait heatmap")
-  par(def.par)
+  #par(def.par)
   
 }
+
 
 # heatmap_plot_lumi_eset_raw
 heatmap_plot_lumi <- function(eset){
