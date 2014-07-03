@@ -13,6 +13,40 @@ This is an example of a typical workflow we apply at the NIHR BRC-MH Bioinformat
 
 *********
 
+### Some Notes, references and papers : Please read
+This isn’t an exhaustive list, but a place to start and get an overview of some of the important stuff when it comes to gene expression analysis, qc, pre-processing...ignore the "learn R" stuff if you already useR!..read the papers and try the tutorials...  
+
+Quick R :- http://www.statmethods.net/  
+Online learning RStudio: http://www.rstudio.com/resources/training/online-learning/  
+Using Bioconductor with Microarray Analysis: http://www.bioconductor.org/help/workflows/arrays/  
+Du, P., Kibbe, W.A., Lin and S.M. (2008). “lumi: a pipeline for processing Illumina microarray.” Bioinformatics.  
+Lin, S.M., Du, P., Kibbe and W.A. (2008). “Model-based Variance-stabilizing Transformation for Illumina Microarray Data.” Nucleic Acids Res.  
+Du, P., Kibbe, W.A., Lin and S.M. (2007). “nuID: A universal naming schema of oligonucleotides for Illumina, Affymetrix, and other microarrays.” Biology Direct.  
+Smyth GK (2005). “Limma: linear models for microarray data.” In Gentleman R, Carey V, Dudoit S, Irizarry R and Huber W (eds.), Bioinformatics and Computational Biology Solutions Using R and Bioconductor, pp. 397–420. Springer, New York.
+Lumi:- http://bioconductor.org/packages/2.0/bioc/vignettes/lumi/inst/doc/lumi.pdf  
+Xie Y (2010). MBCB: MBCB (Model-based Background Correction for Beadarray). R package version 1.18.0, http://www.utsouthwestern.edu.  
+WGCNA: an R package for weighted correlation network analysis : http://labs.genetics.ucla.edu/horvath/CoexpressionNetwork/Rpackages/WGCNA/index.html  
+Tutorials for the WGCNA package : http://labs.genetics.ucla.edu/horvath/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/  
+WGCNA Background and glossary: http://labs.genetics.ucla.edu/horvath/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/Simulated-00-Background.pdf  
+Integrating Genetic and Network Analysis to Characterize Genes Related to Mouse Weight : http://www.plosgenetics.org/article/info:doi/10.1371/journal.pgen.0020130  
+Getting Started in Gene Expression Microarray Analysis:http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1000543  
+Network methods for describing sample relationships in genomic datasets: application to Huntington’s disease: http://ccforum.com/1752-0509/6/63  
+Discovering statistically significant pathways in expression profiling studies: http://www.pnas.org/content/102/38/13544.full?maxtoshow=&HITS=10&hits=10&RESULTFORMAT=1&author1=tian&andorexacttitle=and&andorexacttitleabs=and&andorexactfulltext=and&searchid=1&FIRSTINDEX=0&sortspec=relevance&resourcetype=HWCIT
+Removing Batch Effects in Analysis of Expression Microarray Data: An Evaluation of Six Batch Adjustment Methods: http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0017238  
+Adjusting batch effects in microarray expression data using empirical Bayes methods. : http://biostatistics.oxfordjournals.org/content/8/1/118.abstract  
+Tackling the widespread and critical impact of batch effects in high-throughput data: http://www.nature.com/nrg/journal/v11/n10/abs/nrg2825.html  
+Comparison of normalization methods for Illumina BeadChip HumanHT-12 v3: http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3091625&tool=pmcentrez&rendertype=abstract  
+RIN: http://en.wikipedia.org/wiki/RNA_integrity_number  
+PCA: http://en.wikipedia.org/wiki/Principle_components_analysis  
+XIST: http://en.wikipedia.org/wiki/XIST_%28gene%29  
+
+**NB1**:our workflow..This is one way of doing it, that works well in my hands...it ensures good clean data and picks out potential problematic samples/issues....those with a little R skill are free to edit and adjust as needed. This isnt a "one shoe fits all" workflow and folks are free to edit/adjust all steps/thresholds as needed...just document the hows and whys and edits when you come to sharing the data and any and all changes and steps made when processing your data.
+
+**NB2**: Small data sets where you have <10 samples per group of interest tend to break the workflow., same with missing data....so....Preaching to the converted  ( I hope ) :- explore your data before blindly stepping through any workflow/pipeline/analysis...box plots, histograms, missing rates, skewness, outliers, correlations, pca, means, mins, max, frequency tables, counts per group, variance, zero variance and small (<10) sample groups/predictors...and the list goes on and on...then adjust your analyses accordingly 
+
+
+*********
+
 illumina_gene_expression_workflow_preProcessing.Rmd
 -----------------------------------------------------
 
