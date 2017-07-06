@@ -1,7 +1,7 @@
 Illumina Gene Expression Analysis Workflow
 ===========================================
 
-***Authors:***  amos.folarin@kcl.ac.uk, hamel.patel@kcl.ac.uk, stephen.newhouse@kcl.ac.uk
+***Authors:***  hamel.patel@kcl.ac.uk, stephen.newhouse@kcl.ac.uk
 
 Illumina Chip based Gene Expression Pipeline (QC, Normalization, Differential Expression)  
 
